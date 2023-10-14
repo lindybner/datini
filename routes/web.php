@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ConsoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +18,11 @@ Route::get('/', function () {
 });
 
 // Dashboard
-Route::get('/console/overview', [ConsoleController::class, 'overview'])->middleware('auth');
+Route::get('/overview', [AppController::class, 'overview'])->middleware('auth');
 
 // Login - Display Form
-Route::get('/console/login', [ConsoleController::class, 'loginForm'])->middleware('guest')->name('login');
+Route::get('/login', [AppController::class, 'loginForm'])->middleware('guest')->name('login');
 // Login - Process Form
-Route::post('/console/login', [ConsoleController::class, 'login'])->middleware('guest');
+Route::post('/login', [AppController::class, 'login'])->middleware('guest');
 // Logout
-Route::get('/console/logout', [ConsoleController::class, 'logout'])->middleware('auth');
+Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
