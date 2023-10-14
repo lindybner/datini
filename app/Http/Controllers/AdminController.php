@@ -27,7 +27,7 @@ class AdminController extends Controller
         ]);
 
         if (auth()->attempt($attributes)) {
-            return redirect('/admin');
+            return redirect('/admin/dashboard');
         }
 
         return back()
