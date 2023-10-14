@@ -28,10 +28,10 @@
                     <a class="nav-link active" href="/console/overview">Overview</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/console/cash-flow">Cash Flow</a>
+                    <a class="nav-link" href="/console/flow">Flow</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/console/balance-sheet">Balance Sheet</a>
+                    <a class="nav-link" href="/console/balance">Balance</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="/console/logout">Logout</a>
