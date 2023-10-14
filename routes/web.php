@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 // Admin Dashboard
-Route::get('/admin', [AdminController::class, 'admin']);
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
 
 // Admin Login - Display Form
 Route::get('/admin/login', [AdminController::class, 'loginForm']);
