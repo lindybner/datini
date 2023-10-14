@@ -24,11 +24,21 @@
 
             <div class="mb-3">
                 <div><label for="username">Username:</label></div>
-                <div><input type="text" name="username" id="username" placeholder="username" value="<?= old('username') ?>"></div>
+                <div>
+                    <input type="text" name="username" id="username" placeholder="username" value="<?= old('username') ?>">
+                    <?php if($errors->first('username')): ?>
+                        <span class="text-danger"><?= $errors->first('username'); ?></span>
+                    <?php endif; ?>
+                </div>
             </div>
             <div class="mb-3">
                 <div><label for="password">Password:</label></div>
-                <div><input type="password" name="password" id="password" placeholder="password"></div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <?php if($errors->first('password')): ?>
+                        <span class="text-danger"><?= $errors->first('password'); ?></span>
+                    <?php endif; ?>
+                </div>
             </div>
 
             <button type="submit" class="btn btn-outline-primary btn-lg">Log In</button>
