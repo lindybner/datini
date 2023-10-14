@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 // Dashboard
-Route::get('/console/dashboard', [ConsoleController::class, 'dashboard'])->middleware('auth');
+Route::get('/console/overview', [ConsoleController::class, 'overview'])->middleware('auth');
 
 // Login - Display Form
 Route::get('/console/login', [ConsoleController::class, 'loginForm'])->middleware('guest')->name('login');
