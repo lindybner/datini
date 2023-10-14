@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Dashboard
+// Overview
 Route::get('/overview', [AppController::class, 'overview'])->middleware('auth');
 
 // Login - Display Form
