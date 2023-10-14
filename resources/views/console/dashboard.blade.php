@@ -18,9 +18,9 @@
         <?php if(Auth::check()): ?>
             You are logged in as
             <strong><?= auth()->user()->username ?></strong> |
-            <a href="/console/logout/">Logout</a> |
             <a href="/console/dashboard">Dashboard</a> |
-            <a href="/">Homepage</a>
+            <a href="/">Homepage</a> |
+            <a href="/console/logout/">Logout</a>
 
         <?php else: ?>
             <a href="/">Return to Homepage</a>
