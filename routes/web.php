@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->middleware('auth');
 
 // Admin Login - Display Form
-Route::get('/admin/login', [AdminController::class, 'loginForm'])->middleware('guest');
+Route::get('/admin/login', [AdminController::class, 'loginForm'])->middleware('guest')->name('login');
 // Admin Login - Process Form
 Route::post('/admin/login', [AdminController::class, 'login'])->middleware('guest');
 // Admin Logout
