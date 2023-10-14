@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ConsoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Admin Dashboard
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->middleware('auth');
+// Dashboard
+Route::get('/admin/dashboard', [ConsoleController::class, 'dashboard'])->middleware('auth');
 
-// Admin Login - Display Form
-Route::get('/admin/login', [AdminController::class, 'loginForm'])->middleware('guest')->name('login');
-// Admin Login - Process Form
-Route::post('/admin/login', [AdminController::class, 'login'])->middleware('guest');
-// Admin Logout
-Route::get('/admin/logout', [AdminController::class, 'logout'])->middleware('auth');
+// Login - Display Form
+Route::get('/admin/login', [ConsoleController::class, 'loginForm'])->middleware('guest')->name('login');
+// Login - Process Form
+Route::post('/admin/login', [ConsoleController::class, 'login'])->middleware('guest');
+// Logout
+Route::get('/admin/logout', [ConsoleController::class, 'logout'])->middleware('auth');
