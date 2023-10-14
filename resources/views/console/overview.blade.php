@@ -12,21 +12,43 @@
 </head>
 <body>
 
-    <header class="m-5">
-        <h1 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Overview</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Datini</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="/console/overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/console/cash-flow">Cash Flow</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/console/balance-sheet">Balance Sheet</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/console/logout">Logout</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
+            <h1>
+                Overview
+            </h1>
+            <?php if(Auth::check()): ?>
+                Logged in as
+                <strong><?= auth()->user()->username ?></strong>!
 
-        <?php if(Auth::check()): ?>
-            You are logged in as
-            <strong><?= auth()->user()->username ?></strong> |
-            <a href="/">Homepage</a> |
-            <a href="/console/overview">Overview</a> |
-            <a href="/console/cash-flow">Cash Flow</a> |
-            <a href="/console/balance-sheet">Balance Sheet</a> |
-            <a href="/console/logout/">Logout</a>
-
-        <?php else: ?>
-            <a href="/">Return to Homepage</a>
-        <?php endif; ?>
+            <?php else: ?>
+                <a href="/">Return to Homepage</a>
+            <?php endif; ?>
+        </div>
     </header>
 
     <section class="p-3 m-5 border border-primary-subtle rounded-3">
