@@ -18,4 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin', [AdminController::class, 'admin']);
+// Admin Dashboard
+Route::get('/admin', [AdminController::class, 'admin']);
+
+// Admin Login - Display Form
+Route::get('/admin/login', [AdminController::class, 'loginForm']);
+// Admin Login - Process Form
+Route::post('/admin/login', [AdminController::class, 'login']);
+// Admin Logout
+Route::get('/admin/logout', [AdminController::class, 'logout']);
