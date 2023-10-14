@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ConsoleController extends Controller
+class AppController extends Controller
 {
     // Return Overview view
     public function overview()
     {
-        return view('console.overview');
+        return view('overview');
     }
 
     // Return Login Form view
     public function loginForm()
     {
-        return view('console.login');
+        return view('login');
     }
 
     // Process login form on submission
@@ -27,7 +27,7 @@ class ConsoleController extends Controller
         ]);
 
         if (auth()->attempt($attributes)) {
-            return redirect('/console/overview');
+            return redirect('/overview');
         }
 
         return back()
