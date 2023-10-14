@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title>Overview</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/app.css">
@@ -13,13 +13,13 @@
 <body>
 
     <header class="m-5">
-        <h1 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Dashboard</h1>
+        <h1 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Overview</h1>
 
         <?php if(Auth::check()): ?>
             You are logged in as
             <strong><?= auth()->user()->username ?></strong> |
             <a href="/">Homepage</a> |
-            <a href="/console/dashboard">Dashboard</a> |
+            <a href="/console/overview">Overview</a> |
             <a href="/console/logout/">Logout</a>
 
         <?php else: ?>
