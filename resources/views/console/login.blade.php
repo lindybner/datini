@@ -13,7 +13,7 @@
 <body>
 
     <header class="m-5">
-        <h1 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Admin Login</h1>
+        <h1 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Login</h1>
     </header>
 
     <section class="p-3 m-5 border border-primary-subtle rounded-3">
