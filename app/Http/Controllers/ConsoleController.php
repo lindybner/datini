@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class ConsoleController extends Controller
 {
-    // Return Dashboard view
-    public function dashboard()
+    // Return Overview view
+    public function overview()
     {
-        return view('console.dashboard');
+        return view('console.overview');
     }
 
     // Return Login Form view
@@ -27,7 +27,7 @@ class ConsoleController extends Controller
         ]);
 
         if (auth()->attempt($attributes)) {
-            return redirect('/console/dashboard');
+            return redirect('/console/overview');
         }
 
         return back()
