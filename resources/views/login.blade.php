@@ -18,7 +18,7 @@
 
     <section class="p-3 m-5 border border-primary-subtle rounded-3">
         
-        <form action="/console/login" method="post" novalidation>
+        <form action="/login" method="post" novalidation>
         
             <?= csrf_field() ?>
 
