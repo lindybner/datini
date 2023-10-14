@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class ConsoleController extends Controller
 {
-    // Return Admin Dashboard view
+    // Return Dashboard view
     public function dashboard()
     {
-        return view('admin.dashboard');
+        return view('console.dashboard');
     }
 
-    // Return Admin Form view
+    // Return Login Form view
     public function loginForm()
     {
-        return view('admin.login');
+        return view('console.login');
     }
 
     // Process login form on submission
@@ -27,7 +27,7 @@ class AdminController extends Controller
         ]);
 
         if (auth()->attempt($attributes)) {
-            return redirect('/admin/dashboard');
+            return redirect('/console/dashboard');
         }
 
         return back()
