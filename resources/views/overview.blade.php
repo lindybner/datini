@@ -25,16 +25,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                    <a class="nav-link active" href="/overview">Overview</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/flow">Flow</a>
+                        <a class="nav-link" href="/overview">Overview</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/balance">Balance</a>
+                        <a class="nav-link" href="/flow">Flow</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
+                        <a class="nav-link" href="/balance">Balance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
                     </li>
                 </ul>
                 </div>
