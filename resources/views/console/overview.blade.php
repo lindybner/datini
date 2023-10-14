@@ -20,6 +20,8 @@
             <strong><?= auth()->user()->username ?></strong> |
             <a href="/">Homepage</a> |
             <a href="/console/overview">Overview</a> |
+            <a href="/console/cash-flow">Cash Flow</a> |
+            <a href="/console/balance-sheet">Balance Sheet</a> |
             <a href="/console/logout/">Logout</a>
 
         <?php else: ?>
