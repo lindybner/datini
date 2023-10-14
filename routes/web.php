@@ -19,11 +19,11 @@ Route::get('/', function () {
 });
 
 // Dashboard
-Route::get('/admin/dashboard', [ConsoleController::class, 'dashboard'])->middleware('auth');
+Route::get('/console/dashboard', [ConsoleController::class, 'dashboard'])->middleware('auth');
 
 // Login - Display Form
-Route::get('/admin/login', [ConsoleController::class, 'loginForm'])->middleware('guest')->name('login');
+Route::get('/console/login', [ConsoleController::class, 'loginForm'])->middleware('guest')->name('login');
 // Login - Process Form
-Route::post('/admin/login', [ConsoleController::class, 'login'])->middleware('guest');
+Route::post('/console/login', [ConsoleController::class, 'login'])->middleware('guest');
 // Logout
-Route::get('/admin/logout', [ConsoleController::class, 'logout'])->middleware('auth');
+Route::get('/console/logout', [ConsoleController::class, 'logout'])->middleware('auth');
