@@ -14,6 +14,17 @@
 
     <header class="m-5">
         <h1 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Admin Dashboard</h1>
+
+        <?php if(Auth::check()): ?>
+            You are logged in as
+            <strong><?= auth()->user()->username ?></strong> |
+            <a href="/admin/logout/">Logout</a> |
+            <a href="/admin/dashboard">Dashboard</a> |
+            <a href="/">Homepage</a>
+
+        <?php else: ?>
+            <a href="/">Return to Homepage</a>
+        <?php endif; ?>
     </header>
 
     <section class="p-3 m-5 border border-primary-subtle rounded-3">
