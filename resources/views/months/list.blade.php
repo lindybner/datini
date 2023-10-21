@@ -73,9 +73,6 @@
                     <td><?= $value->id ?></td>
                     <td><?= $value->month ?></td>
                     <td><?= $value->year ?></td>
-                    {{-- <td>lorem</td>
-                    <td>lorem</td>
-                    <td>lorem</td> --}}
                     <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a href="/months/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
