@@ -35,3 +35,6 @@ Route::get('/months/list', [MonthsController::class, 'list'])->middleware('auth'
 
 // Read - flows
 Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
+
+// Read - balances
+Route::get('/balances/list', [BalancesController::class, 'list'])->middleware('auth');
