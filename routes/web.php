@@ -30,4 +30,4 @@ Route::post('/login', [AppController::class, 'login'])->middleware('guest');
 Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 
 // Read - periods
-Route::get('/overview', [MonthsController::class, 'list'])->middleware('auth');
+Route::get('/month', [MonthsController::class, 'list'])->middleware('auth');
