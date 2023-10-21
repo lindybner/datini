@@ -45,7 +45,7 @@
         </nav>
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Month
+                Months
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
@@ -58,15 +58,13 @@
     </header>
 
     <div class="container">
-        <h2>Months</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Month</th>
                     <th scope="col">Year</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <?php foreach($months as $key => $value): ?>
@@ -74,8 +72,7 @@
                     <td><?= $value->$id ?></td>
                     <td><?= $value->$month ?></td>
                     <td><?= $value->$year ?></td>
-                    <td><a href="/overview/edit/<?= $value->id ?>">Edit</a></td>
-                    <td><a href="/overview/delete/<?= $value->id ?>">Delete</a></td>
+                    <td><a href="/overview/edit/<?= $value->id ?>">Edit</a> | <a href="/overview/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </table>
