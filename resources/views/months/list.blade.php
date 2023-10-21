@@ -70,9 +70,9 @@
             </tbody>
             <?php foreach($months as $key => $value): ?>
                 <tr>
-                    <td><?= $value->$id ?></td>
-                    <td><?= $value->$month ?></td>
-                    <td><?= $value->$year ?></td>
+                    <td><?= $value->id ?></td>
+                    <td><?= $value->month ?></td>
+                    <td><?= $value->year ?></td>
                     {{-- <td>lorem</td>
                     <td>lorem</td>
                     <td>lorem</td> --}}
