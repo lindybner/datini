@@ -28,7 +28,7 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/overview">Overview</a>
+                        <a class="nav-link" href="/month">Month</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/flow">Flow</a>
@@ -45,7 +45,7 @@
         </nav>
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Overview
+                Month
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
