@@ -62,7 +62,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Month</th>
                     <th scope="col">Year</th>
                     <th scope="col">Edit</th>
