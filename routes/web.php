@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\MonthsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,6 @@ Route::get('/login', [AppController::class, 'loginForm'])->middleware('guest')->
 Route::post('/login', [AppController::class, 'login'])->middleware('guest');
 // Logout
 Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
+
+// Read - periods
+Route::get('/overview', [MonthsController::class, 'list'])->middleware('auth');
