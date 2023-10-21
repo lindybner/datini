@@ -73,7 +73,7 @@
                     <td><?= $value->id ?></td>
                     <td><?= $value->month ?></td>
                     <td><?= $value->year ?></td>
-                    <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a href="/months/delete/<?= $value->id ?>">Delete</a></td>
+                    <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/months/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

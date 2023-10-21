@@ -75,7 +75,7 @@
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td><?= $value->inflow ?></td>
                     <td><?= $value->outflow ?></td>
-                    <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a href="/flows/delete/<?= $value->id ?>">Delete</a></td>
+                    <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>

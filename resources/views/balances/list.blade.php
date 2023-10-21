@@ -75,7 +75,7 @@
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td><?= $value->asset ?></td>
                     <td><?= $value->liability ?></td>
-                    <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a href="/balances/delete/<?= $value->id ?>">Delete</a></td>
+                    <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/balances/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
