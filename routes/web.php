@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\FlowsController;
 use App\Http\Controllers\MonthsController;
 use Illuminate\Support\Facades\Route;
 
