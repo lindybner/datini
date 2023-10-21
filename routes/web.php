@@ -31,3 +31,6 @@ Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 
 // Read - months
 Route::get('/months/list', [MonthsController::class, 'list'])->middleware('auth');
+
+// Read - flows
+Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
