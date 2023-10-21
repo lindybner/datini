@@ -28,7 +28,7 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/month">Month</a>
+                        <a class="nav-link" href="/months">Months</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/flow">Flow</a>
@@ -64,7 +64,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Step 1</h2>
                         <p class="card-text">Set the period: Enter the "year" and "month" for the period you are entering statement balances for. If it's already in the database, go to step 2!</p>
-                        <a class="btn btn-primary" href="/month" role="button">Month</a>
+                        <a class="btn btn-primary" href="/months" role="button">Months</a>
                     </div>
                 </div>
             </div>

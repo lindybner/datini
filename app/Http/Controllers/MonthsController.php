@@ -11,7 +11,7 @@ class MonthsController extends Controller
 
     public function list()
     {
-        return view('month', [
+        return view('months', [
             'months' => Month::all()
         ]);
     }
