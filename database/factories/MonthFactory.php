@@ -20,7 +20,7 @@ class MonthFactory extends Factory
         return [
             'month' => $this->faker->monthName, // Use faker to generate a random month name
             'year' => $this->faker->year, // Use faker to generate a random year
-            'user_id' => User::factory()->create()->id, // Create a new user and use its ID
+            'user_id' => User::all()->random(), // Grab a random id from User
         ];
     }
 }
