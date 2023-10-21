@@ -45,7 +45,7 @@
         </nav>
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Months
+                Cash Flows
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
@@ -63,22 +63,24 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Month</th>
-                    <th scope="col">Year</th>
+                    <th scope="col">Inflow</th>
+                    <th scope="col">Outflow</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             </tbody>
-            <?php foreach($months as $key => $value): ?>
+            <?php foreach($flows as $key => $value): ?>
                 <tr>
                     <td><?= $value->id ?></td>
-                    <td><?= $value->month ?></td>
-                    <td><?= $value->year ?></td>
-                    <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a href="/months/delete/<?= $value->id ?>">Delete</a></td>
+                    <td><?= $value->month_id ?></td>
+                    <td><?= $value->inflow ?></td>
+                    <td><?= $value->outflow ?></td>
+                    <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="/months/add">Add a new month</a>
+        <a href="/flows/add">Add a new cash flow record</a>
     </div>
 
 </body>
