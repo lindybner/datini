@@ -28,13 +28,13 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/months">Months</a>
+                        <a class="nav-link" href="/months/list">Months</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/flow">Flow</a>
+                        <a class="nav-link" href="/flows/list">Flows</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/balance">Balance</a>
+                        <a class="nav-link" href="/balances/list">Balances</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Logout</a>
@@ -73,7 +73,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Step 2</h2>
                         <p class="card-text">Once you've selected your period, enter the balances on your statements for assets (what you own) and liabilities (what you owe).</p>
-                        <a class="btn btn-primary" href="/flow/list" role="button">Flow</a>
+                        <a class="btn btn-primary" href="/flows/list" role="button">Flows</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Step 3</h2>
                         <p class="card-text">Finally, figure out your cashflow: Enter the amount for your inflow (what you've earned) and outflow (what you've spent).</p>
-                        <a class="btn btn-primary" href="/balance/list" role="button">Balance</a>
+                        <a class="btn btn-primary" href="/balances/list" role="button">Balances</a>
                     </div>
                 </div>
             </div>
