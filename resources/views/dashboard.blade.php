@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand fw-semibold" href="/">Datini</a>
                 <span class="navbar-text fst-italic">
-                    Personal finances in 3 simple steps!
+                    In 3 simple steps, get all your personal finances in order!
                 </span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,24 +62,27 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title">Overview &amp; Months</h2>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h2 class="card-title">Step 1</h2>
+                        <p class="card-text">Set the period: Enter the "year" and "month" for the period you are entering statement balances for. If it's already in the database, go to step 2!</p>
+                        <a class="btn btn-primary" href="/overview" role="button">Overview</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title">Card title</h2>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h2 class="card-title">Step 2</h2>
+                        <p class="card-text">Once you've selected your period, enter the balances on your statements for assets (what you own) and liabilities (what you owe).</p>
+                        <a class="btn btn-primary" href="/flow" role="button">Flow</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title">Card title</h2>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <h2 class="card-title">Step 3</h2>
+                        <p class="card-text">Finally, figure out your cashflow: Enter the amount for your inflow (what you've earned) and outflow (what you've spent).</p>
+                        <a class="btn btn-primary" href="/balance" role="button">Balance</a>
                     </div>
                 </div>
             </div>
