@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Overview
-Route::get('/overview', [AppController::class, 'overview'])->middleware('auth');
+// Dashboard
+Route::get('/dashboard', [AppController::class, 'dashboard'])->middleware('auth');
 
 // Login - Display Form
 Route::get('/login', [AppController::class, 'loginForm'])->middleware('guest')->name('login');

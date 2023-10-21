@@ -45,7 +45,7 @@
         </nav>
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Overview
+                Dashboard
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
