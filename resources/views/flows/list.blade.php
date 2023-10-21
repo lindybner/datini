@@ -28,13 +28,13 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/month">Month</a>
+                        <a class="nav-link" href="/months/list">Month</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/flow">Flow</a>
+                        <a class="nav-link" href="/flows/list">Flow</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/balance">Balance</a>
+                        <a class="nav-link" href="/balances/list">Balance</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Logout</a>
