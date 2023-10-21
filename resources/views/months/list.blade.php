@@ -67,16 +67,21 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
+            </tbody>
             <?php foreach($months as $key => $value): ?>
                 <tr>
                     <td><?= $value->$id ?></td>
                     <td><?= $value->$month ?></td>
                     <td><?= $value->$year ?></td>
-                    <td><a href="/overview/edit/<?= $value->id ?>">Edit</a> | <a href="/overview/delete/<?= $value->id ?>">Delete</a></td>
+                    {{-- <td>lorem</td>
+                    <td>lorem</td>
+                    <td>lorem</td> --}}
+                    <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a href="/months/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
+            </tbody>
         </table>
-        <a href="/overview/add">Add a new month</a>
+        <a href="/months/add">Add a new month</a>
     </div>
 
 </body>
