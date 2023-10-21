@@ -7,4 +7,9 @@ use Illuminate\Http\Request;
 class MonthsController extends Controller
 {
     //
+
+    public function list()
+    {
+        return view('overview');
+    }
 }
