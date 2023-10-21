@@ -72,7 +72,7 @@
             <?php foreach($flows as $key => $value): ?>
                 <tr>
                     <td><?= $value->id ?></td>
-                    <td><?= $value->month_id ?></td>
+                    <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td><?= $value->inflow ?></td>
                     <td><?= $value->outflow ?></td>
                     <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a href="/flows/delete/<?= $value->id ?>">Delete</a></td>
