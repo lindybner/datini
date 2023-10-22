@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('months', function (Blueprint $table) {
             $table->id();
-            $table->enum('month', ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
-            $table->year('year');
+            $table->string('month');
+            $table->string('year');
             $table->foreignId('user_id');
             $table->timestamps();
         });
