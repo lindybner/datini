@@ -23,4 +23,9 @@ class BalancesController extends Controller
         return redirect('/balances/list')
             ->with('message', 'Balance record deleted');
     }
+
+    public function addForm()
+    {
+        return view('balances.add');
+    }
 }
