@@ -39,6 +39,7 @@ class MonthsController extends Controller
         $month = new Month();
         $month->month = $attributes['month'];
         $month->year = $attributes['year'];
+        $month->save();
 
         return redirect('/months/list')
             ->with('message', 'New month added.');
