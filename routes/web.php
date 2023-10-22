@@ -42,3 +42,9 @@ Route::get('/balances/list', [BalancesController::class, 'list'])->middleware('a
 
 // Delete - months
 Route::get('/months/delete/{month:id}', [MonthsController::class, 'delete'])->where('month', '[0-9]+')->middleware('auth');
+
+// Delete - flows
+Route::get('/flows/delete/{flow:id}', [FlowsController::class, 'delete'])->where('flow', '[0-9]+')->middleware('auth');
+
+// Delete - months
+Route::get('/balances/delete/{balance:id}', [BalancesController::class, 'delete'])->where('balance', '[0-9]+')->middleware('auth');
