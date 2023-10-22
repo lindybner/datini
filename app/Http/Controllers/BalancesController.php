@@ -37,8 +37,8 @@ class BalancesController extends Controller
         ]);
 
         $balance = new Balance();
-        $balance->month = $attributes['asset'];
-        $balance->year = $attributes['liability'];
+        $balance->asset = $attributes['asset'];
+        $balance->liability = $attributes['liability'];
         $balance->save();
 
         return redirect('/balances/list')
