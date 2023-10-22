@@ -15,4 +15,12 @@ class BalancesController extends Controller
             'balances' => Balance::all()
         ]);
     }
+
+    public function delete(Balance $balance)
+    {
+        $balance->delete();
+
+        return redirect('/balances/list')
+            ->with('message', 'Balance record deleted');
+    }
 }
