@@ -85,7 +85,7 @@
         </form>
 
 
-        <a href="/months/list">Back to Balances</a>
+        <a href="/balances/list">Back to Balances</a>
     </div>
 
 </body>

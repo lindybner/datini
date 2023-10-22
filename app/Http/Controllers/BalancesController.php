@@ -28,4 +28,20 @@ class BalancesController extends Controller
     {
         return view('balances.add');
     }
+
+    public function add()
+    {
+        $attributes = request()->validate([
+            'asset' => 'required',
+            'liability' => 'required',
+        ]);
+
+        $balance = new Balance();
+        $balance->month = $attributes['asset'];
+        $balance->year = $attributes['liability'];
+        $balance->save();
+
+        return redirect('/balances/list')
+            ->with('message', 'New balance added.');
+    }
 }
