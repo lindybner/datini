@@ -15,4 +15,9 @@ class MonthsController extends Controller
             'months' => Month::all()
         ]);
     }
+
+    public function delete(Month $month)
+    {
+        ddd($month);
+    }
 }
