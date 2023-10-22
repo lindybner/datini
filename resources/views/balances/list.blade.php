@@ -82,7 +82,7 @@
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td>$ <?= $value->asset ?></td>
                     <td>$ <?= $value->liability ?></td>
-                    <td>$ <?= $value->asset - $value->liability ?></td>
+                    <td><strong>$ <?= $value->asset - $value->liability ?></strong></td>
                     <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/balances/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
