@@ -71,6 +71,7 @@
                     <th scope="col">Month</th>
                     <th scope="col">Inflow</th>
                     <th scope="col">Outflow</th>
+                    <th scope="col">Savings</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -81,6 +82,7 @@
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td>$ <?= $value->inflow ?></td>
                     <td>$ <?= $value->outflow ?></td>
+                    <td>$ <?= $value->inflow - $value->outflow ?></td>
                     <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
