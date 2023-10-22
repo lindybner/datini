@@ -64,7 +64,7 @@
     <?php endif; ?>
 
     <div class="container">
-        <table class="table table-striped">
+        <table class="table table-striped text-center">
             <thead>
                 <tr>
                     <th scope="col">Month</th>
