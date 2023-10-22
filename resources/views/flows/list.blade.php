@@ -67,7 +67,6 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
                     <th scope="col">Month</th>
                     <th scope="col">Inflow</th>
                     <th scope="col">Outflow</th>
