@@ -77,7 +77,6 @@
             </tbody>
             <?php foreach($flows as $key => $value): ?>
                 <tr>
-                    <td><?= $value->id ?></td>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td>$<?= number_format($value->inflow, 2, '.', ',') ?></td>
                     <td>$<?= number_format($value->outflow, 2, '.', ',') ?></td>
