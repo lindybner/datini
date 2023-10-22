@@ -80,9 +80,9 @@
                 <tr>
                     <td><?= $value->id ?></td>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
-                    <td>$ <?= $value->asset ?></td>
-                    <td>$ <?= $value->liability ?></td>
-                    <td><strong>$ <?= $value->asset - $value->liability ?></strong></td>
+                    <td>$<?= number_format($value->asset, 2, '.', ',') ?></td>
+                    <td>$<?= number_format($value->liability, 2, '.', ',') ?></td>
+                    <td><strong>$ <?= number_format($value->asset - $value->liability, 2, '.', ',') ?></strong></td>
                     <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/balances/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
