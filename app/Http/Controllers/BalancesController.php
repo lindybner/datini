@@ -23,25 +23,4 @@ class BalancesController extends Controller
         return redirect('/balances/list')
             ->with('message', 'Balance record deleted');
     }
-
-    public function addForm()
-    {
-        return view('balances.add');
-    }
-
-    public function add()
-    {
-        $attributes = request()->validate([
-            'asset' => 'required',
-            'liability' => 'required',
-        ]);
-
-        $balance = new Balance();
-        $balance->asset = $attributes['asset'];
-        $balance->liability = $attributes['liability'];
-        $balance->save();
-
-        return redirect('/balances/list')
-            ->with('message', 'New balance added.');
-    }
 }
