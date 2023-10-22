@@ -71,6 +71,7 @@
                     <th scope="col">Month</th>
                     <th scope="col">Asset</th>
                     <th scope="col">Liability</th>
+                    <th scope="col">Net Worth</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -81,6 +82,7 @@
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td>$ <?= $value->asset ?></td>
                     <td>$ <?= $value->liability ?></td>
+                    <td>$ <?= $value->asset - $value->liability ?></td>
                     <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/balances/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
