@@ -57,6 +57,12 @@
         </div>
     </header>
 
+    <?php if(session()->has('message')): ?>
+        <div class="text-danger m-5 p-3 text-center border border-danger rounded-3">
+            <?= session()->get('message') ?>
+        </div>
+    <?php endif; ?>
+
     <div class="container">
         <table class="table">
             <thead>
