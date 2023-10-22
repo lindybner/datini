@@ -62,33 +62,27 @@
             <?= csrf_field() ?>
 
             <div>
-                <label for="month">Select Month:</label>
-                <select id="month" name="month">
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
+                <label for="month">Month:</label>
+                <input type="text" name="month" id="month">
             </div>
             <div>
-                <label for="year">Enter Year:</label>
+                <label for="year">Year:</label>
                 <input type="text" name="year" id="year">
             </div>
+
+            <?php if($errors->first('month')): ?>
+                <span class="text-danger"><?= $errors->first('month') ?></span>
+                <br>
+            <?php endif; ?>
 
             <?php if($errors->first('year')): ?>
                 <span class="text-danger"><?= $errors->first('year') ?></span>
                 <br>
             <?php endif; ?>
+
             <button type="submit">Add Month</button>
         </form>
+
 
         <a href="/months/list">Back to Months</a>
     </div>
