@@ -17,7 +17,7 @@ return new class extends Migration
             // $table->foreignId('user_id');
             $table->decimal('asset', 10, 2);
             $table->decimal('liability', 10, 2);
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 
