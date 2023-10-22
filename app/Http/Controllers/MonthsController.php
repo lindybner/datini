@@ -28,4 +28,14 @@ class MonthsController extends Controller
     {
         return view('months.add');
     }
+
+    public function add()
+    {
+        $attributes = request()->validate([
+            'month' => 'required',
+            'year' => 'required',
+        ]);
+
+        ddd('Add Month');
+    }
 }
