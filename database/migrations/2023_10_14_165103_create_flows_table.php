@@ -17,7 +17,7 @@ return new class extends Migration
             // $table->foreignId('user_id');
             $table->decimal('inflow', 10, 2);
             $table->decimal('outflow', 10, 2);
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
