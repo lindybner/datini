@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('flows', function (Blueprint $table) {
             $table->id();
             $table->foreignId('month_id');
-            $table->foreignId('user_id');
+            // $table->foreignId('user_id');
             $table->decimal('inflow', 10, 2);
             $table->decimal('outflow', 10, 2);
             $table->timestamps();
