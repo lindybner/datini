@@ -67,7 +67,6 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
                     <th scope="col">Month</th>
                     <th scope="col">Asset</th>
                     <th scope="col">Liability</th>
@@ -78,7 +77,6 @@
             </tbody>
             <?php foreach($balances as $key => $value): ?>
                 <tr>
-                    <td><?= $value->id ?></td>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td>$<?= number_format($value->asset, 2, '.', ',') ?></td>
                     <td>$<?= number_format($value->liability, 2, '.', ',') ?></td>
