@@ -71,7 +71,7 @@
                     <th scope="col">Inflow ($)</th>
                     <th scope="col">Outflow ($)</th>
                     <th scope="col">Savings ($)</th>
-                    <th scope="col">Savings (%)</th>
+                    <th scope="col">Savings Rate (%)</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
