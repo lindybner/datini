@@ -80,7 +80,7 @@
             </div>
             <div>
                 <label for="year">Enter Year:</label>
-                <input type="number" name="year" id="year">
+                <input type="text" name="year" id="year">
             </div>
 
             <?php if($errors->first('year')): ?>
