@@ -23,4 +23,9 @@ class MonthsController extends Controller
         return redirect('/months/list')
             ->with('message', 'Month record deleted');
     }
+
+    public function addForm()
+    {
+        return view('months.add');
+    }
 }
