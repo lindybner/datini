@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
         Flow::truncate();
 
         User::factory()->count(1)->create();
-        Month::factory()->count(10)->create();
-        Balance::factory()->count(3)->create();
-        Flow::factory()->count(3)->create();
+        Month::factory()->count(5)->create();
+        Balance::factory()->count(5)->create();
+        Flow::factory()->count(5)->create();
     }
 }
