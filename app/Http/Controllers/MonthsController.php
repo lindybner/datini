@@ -34,6 +34,7 @@ class MonthsController extends Controller
         $attributes = request()->validate([
             'month' => 'required',
             'year' => 'required',
+            'user_id' => auth()->user()->id,
         ]);
 
         $month = new Month();
