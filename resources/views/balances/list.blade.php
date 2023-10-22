@@ -64,7 +64,7 @@
     <?php endif; ?>
 
     <div class="container">
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Month</th>
@@ -74,7 +74,7 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            </tbody>
+            <tbody>
             <?php foreach($balances as $key => $value): ?>
                 <tr>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>

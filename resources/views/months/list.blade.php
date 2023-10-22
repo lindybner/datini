@@ -72,7 +72,7 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            </tbody>
+            <tbody>
             <?php foreach($months as $key => $value): ?>
                 <tr>
                     <td><?= $value->month ?></td>
