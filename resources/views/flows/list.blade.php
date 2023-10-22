@@ -82,7 +82,7 @@
                     <td><?= number_format($value->inflow, 2, '.', ',') ?></td>
                     <td><?= number_format($value->outflow, 2, '.', ',') ?></td>
                     <td><?= number_format($value->inflow - $value->outflow, 2, '.', ',') ?></td>
-                    <td><?= number_format(($value->inflow - $value->outflow) / $value->inflow * 100, 2, '.', ',') ?></td>
+                    <td><?= number_format(($value->inflow - $value->outflow) / $value->inflow * 100, 2, '.', ',') ?>%</td>
                     <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
