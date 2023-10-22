@@ -18,6 +18,9 @@ class MonthsController extends Controller
 
     public function delete(Month $month)
     {
-        ddd($month);
+        $month->delete();
+
+        return redirect('/months/list')
+            ->with('message', 'Month record deleted');
     }
 }
