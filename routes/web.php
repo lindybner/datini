@@ -3,7 +3,7 @@
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\BalancesController;
 use App\Http\Controllers\FlowsController;
-use App\Http\Controllers\MonthsController;
+use App\Http\Controllers\PeriodsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,8 +31,8 @@ Route::post('/login', [AppController::class, 'login'])->middleware('guest');
 // Logout
 Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 
-// Read - months
-Route::get('/months/list', [MonthsController::class, 'list'])->middleware('auth');
+// Read - period
+Route::get('/periods/list', [PeriodsController::class, 'list'])->middleware('auth');
 
 // Read - flows
 Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
@@ -40,8 +40,8 @@ Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
 // Read - balances
 Route::get('/balances/list', [BalancesController::class, 'list'])->middleware('auth');
 
-// Delete - months
-Route::get('/months/delete/{month:id}', [MonthsController::class, 'delete'])->where('month', '[0-9]+')->middleware('auth');
+// Delete - period
+Route::get('/periods/delete/{month:id}', [PeriodsController::class, 'delete'])->where('month', '[0-9]+')->middleware('auth');
 
 // Delete - flows
 Route::get('/flows/delete/{flow:id}', [FlowsController::class, 'delete'])->where('flow', '[0-9]+')->middleware('auth');
