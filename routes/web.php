@@ -39,3 +39,6 @@ Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
 
 // Read - balances
 Route::get('/balances/list', [BalancesController::class, 'list'])->middleware('auth');
+
+// Delete - months
+Route::get('/months/delete/{month:id}', [MonthsController::class, 'delete'])->where('month', '[0-9]+')->middleware('auth');
