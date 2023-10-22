@@ -65,15 +65,16 @@
                 <label for="month">Month:</label>
                 <input type="text" name="month" id="month">
             </div>
-            <div>
-                <label for="year">Year:</label>
-                <input type="text" name="year" id="year">
-            </div>
 
             <?php if($errors->first('month')): ?>
                 <span class="text-danger"><?= $errors->first('month') ?></span>
                 <br>
             <?php endif; ?>
+            
+            <div>
+                <label for="year">Year:</label>
+                <input type="text" name="year" id="year">
+            </div>
 
             <?php if($errors->first('year')): ?>
                 <span class="text-danger"><?= $errors->first('year') ?></span>
