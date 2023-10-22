@@ -82,6 +82,11 @@
                 <label for="year">Enter Year:</label>
                 <input type="number" name="year" id="year">
             </div>
+
+            <?php if($errors->first('year')): ?>
+                <span class="text-danger"><?= $errors->first('year') ?></span>
+                <br>
+            <?php endif; ?>
             <button type="submit">Add Month</button>
         </form>
 

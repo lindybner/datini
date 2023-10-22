@@ -36,6 +36,11 @@ class MonthsController extends Controller
             'year' => 'required',
         ]);
 
-        ddd('Add Month');
+        $month = new Month();
+        $month->month = $attributes['month'];
+        $month->year = $attributes['year'];
+
+        return redirect('/months/list')
+            ->with('message', 'New month added.');
     }
 }
