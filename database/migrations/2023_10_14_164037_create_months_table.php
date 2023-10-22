@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('month');
             $table->string('year');
             // $table->foreignId('user_id');
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 
