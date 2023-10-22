@@ -80,9 +80,9 @@
                 <tr>
                     <td><?= $value->id ?></td>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
-                    <td>$ <?= $value->inflow ?></td>
-                    <td>$ <?= $value->outflow ?></td>
-                    <td><strong>$ <?= $value->inflow - $value->outflow ?></strong></td>
+                    <td>$<?= number_format($value->inflow, 2, '.', ',') ?></td>
+                    <td>$<?= number_format($value->outflow, 2, '.', ',') ?></td>
+                    <td><strong>$<?= number_format($value->inflow - $value->outflow, 2, '.', ',') ?></strong></td>
                     <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
