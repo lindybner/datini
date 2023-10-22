@@ -31,20 +31,20 @@ Route::post('/login', [AppController::class, 'login'])->middleware('guest');
 // Logout
 Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 
-// Create - months
+// Create - Months
 Route::get('/months/add', [MonthsController::class, 'addForm'])->middleware('auth');
 Route::post('/months/add', [MonthsController::class, 'add'])->middleware('auth');
 
-// Read - months
+// Read - Months
 Route::get('/months/list', [MonthsController::class, 'list'])->middleware('auth');
-// Read - balances
+// Read - Balances
 Route::get('/balances/list', [BalancesController::class, 'list'])->middleware('auth');
-// Read - flows
+// Read - Flows
 Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
 
-// Delete - months
+// Delete - Months
 Route::get('/months/delete/{month:id}', [MonthsController::class, 'delete'])->where('month', '[0-9]+')->middleware('auth');
-// Delete - balances
+// Delete - Balances
 Route::get('/balances/delete/{balance:id}', [BalancesController::class, 'delete'])->where('balance', '[0-9]+')->middleware('auth');
-// Delete - flows
+// Delete - Flows
 Route::get('/flows/delete/{flow:id}', [FlowsController::class, 'delete'])->where('flow', '[0-9]+')->middleware('auth');
