@@ -35,13 +35,16 @@ Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 Route::get('/months/add', [MonthsController::class, 'addForm'])->middleware('auth');
 Route::post('/months/add', [MonthsController::class, 'add'])->middleware('auth');
 
-
 // Read - Months
 Route::get('/months/list', [MonthsController::class, 'list'])->middleware('auth');
 // Read - Balances
 Route::get('/balances/list', [BalancesController::class, 'list'])->middleware('auth');
 // Read - Flows
 Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
+
+// Update - Months
+Route::get('/months/edit/{month:id}', [MonthsController::class, 'editForm'])->where('month', '[0-9]+')->middleware('auth');
+Route::post('/months/edit/{month:id}', [MonthsController::class, 'edit'])->where('month', '[0-9]+')->middleware('auth');
 
 // Delete - Months
 Route::get('/months/delete/{month:id}', [MonthsController::class, 'delete'])->where('month', '[0-9]+')->middleware('auth');
