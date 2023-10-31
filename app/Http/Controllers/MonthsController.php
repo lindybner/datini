@@ -44,4 +44,11 @@ class MonthsController extends Controller
         return redirect('/months/list')
             ->with('message', 'New month added.');
     }
+
+    public function editForm(Month $month)
+    {
+        return view('months.edit', [
+            'month' => $month,
+        ]);
+    }
 }
