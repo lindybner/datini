@@ -51,4 +51,20 @@ class MonthsController extends Controller
             'month' => $month,
         ]);
     }
+
+    public function edit(Month $month)
+    {
+        $attributes = request()->validate([
+            'month' => 'required',
+            'year' => 'required',
+        ]);
+
+
+        $month->month = $attributes['month'];
+        $month->year = $attributes['year'];
+        $month->save();
+
+        return redirect('/months/list')
+            ->with('message', 'Month edited.');
+    }
 }
