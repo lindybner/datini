@@ -84,14 +84,14 @@
                     <?php if($value->balance): ?>
                         <td><?= number_format($value->balance->asset - $value->balance->liability, 2, '.', ',') ?></td>
                     <?php else: ?>
-                        <!-- If no balance data is available, display placeholders or an empty cell -->
+                        <!-- If no balance data is available, display "N/A" -->
                         <td>N/A</td>
                     <?php endif; ?>
                     <!-- Display flow data if available -->
                     <?php if($value->flow): ?>
                         <td><?= number_format($value->flow->inflow - $value->flow->outflow, 2, '.', ',') ?></td>
                     <?php else: ?>
-                        <!-- If no flow data is available, display placeholders or an empty cell -->
+                        <!-- If no flow data is available, display "N/A" -->
                         <td>N/A</td>
                     <?php endif; ?>
                 </tr>
