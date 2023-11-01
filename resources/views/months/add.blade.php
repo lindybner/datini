@@ -61,7 +61,7 @@
         <form action="/months/add" method="POST" novalidate>
             <?= csrf_field() ?>
 
-            <div>
+            <div class="my-3">
                 <label for="month">Month:</label>
                 <input type="text" name="month" id="month">
             </div>
@@ -71,7 +71,7 @@
                 <br>
             <?php endif; ?>
             
-            <div>
+            <div class="my-3">
                 <label for="year">Year:</label>
                 <input type="text" name="year" id="year">
             </div>
@@ -81,7 +81,7 @@
                 <br>
             <?php endif; ?>
 
-            <button type="submit">Add Month</button>
+            <button type="submit" class="btn btn-primary my-3">Add Month</button>
         </form>
 
 
