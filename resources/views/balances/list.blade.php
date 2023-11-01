@@ -67,23 +67,23 @@
         <table class="table table-striped text-center">
             <thead>
                 <tr>
+                    <th scope="col">Action</th>
                     <th scope="col">Month</th>
                     <th scope="col">Asset ($)</th>
                     <th scope="col">Liability ($)</th>
                     <th scope="col">Net Worth ($)</th>
                     <th scope="col">Debt Ratio (%)</th>
-                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
             <?php foreach($balances as $key => $value): ?>
                 <tr>
+                    <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/balances/delete/<?= $value->id ?>">Delete</a></td>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td><?= number_format($value->asset, 2, '.', ',') ?></td>
                     <td><?= number_format($value->liability, 2, '.', ',') ?></td>
                     <td><?= number_format($value->asset - $value->liability, 2, '.', ',') ?></td>
                     <td><?= number_format($value->liability / $value->asset * 100, 2, '.', ',') ?>%</td>
-                    <td><a href="/balances/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/balances/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
