@@ -70,8 +70,8 @@
                     <th scope="col">Action</th>
                     <th scope="col">Month</th>
                     <th scope="col">Year</th>
-                    <th scope="col">Overview - Net Worth</th>
-                    <th scope="col">Overview - Cash Flow</th>
+                    <th scope="col">Asset</th>
+                    <th scope="col">Liability</th>
                 </tr>
             </thead>
             <tbody>
@@ -80,6 +80,15 @@
                     <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/months/delete/<?= $value->id ?>">Delete</a></td>
                     <td><?= $value->month ?></td>
                     <td><?= $value->year ?></td>
+                    <!-- Display balance data if available -->
+                        <?php if($value->balance): ?>
+                            <td><?= $value->balance->asset ?></td>
+                            <td><?= $value->balance->liability ?></td>
+                        <?php else: ?>
+                            <!-- If no balance data is available, display placeholders or an empty cell -->
+                            <td>N/A</td>
+                            <td>N/A</td>
+                        <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
             </tbody>
