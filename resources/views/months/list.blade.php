@@ -70,6 +70,8 @@
                     <th scope="col">Action</th>
                     <th scope="col">Month</th>
                     <th scope="col">Year</th>
+                    <th scope="col">Overview - Net Worth</th>
+                    <th scope="col">Overview - Cash Flow</th>
                 </tr>
             </thead>
             <tbody>
