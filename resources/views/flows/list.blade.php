@@ -67,23 +67,23 @@
         <table class="table table-striped text-center">
             <thead>
                 <tr>
+                    <th scope="col">Action</th>
                     <th scope="col">Month</th>
                     <th scope="col">Inflow ($)</th>
                     <th scope="col">Outflow ($)</th>
                     <th scope="col">Savings ($)</th>
                     <th scope="col">Savings Rate (%)</th>
-                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
             <?php foreach($flows as $key => $value): ?>
                 <tr>
+                    <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td><?= number_format($value->inflow, 2, '.', ',') ?></td>
                     <td><?= number_format($value->outflow, 2, '.', ',') ?></td>
                     <td><?= number_format($value->inflow - $value->outflow, 2, '.', ',') ?></td>
                     <td><?= number_format(($value->inflow - $value->outflow) / $value->inflow * 100, 2, '.', ',') ?>%</td>
-                    <td><a href="/flows/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/flows/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
