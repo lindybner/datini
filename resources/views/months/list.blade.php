@@ -67,17 +67,17 @@
         <table class="table table-striped text-center">
             <thead>
                 <tr>
+                    <th scope="col">Action</th>
                     <th scope="col">Month</th>
                     <th scope="col">Year</th>
-                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
             <?php foreach($months as $key => $value): ?>
                 <tr>
+                    <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/months/delete/<?= $value->id ?>">Delete</a></td>
                     <td><?= $value->month ?></td>
                     <td><?= $value->year ?></td>
-                    <td><a href="/months/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/months/delete/<?= $value->id ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
