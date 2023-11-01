@@ -14,4 +14,10 @@ class Month extends Model
     {
         return $this->hasOne(Balance::class);
     }
+
+    // Define the relationship with the Flow model
+    public function flow()
+    {
+        return $this->hasOne(Flow::class);
+    }
 }
