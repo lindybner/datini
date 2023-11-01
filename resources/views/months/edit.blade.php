@@ -62,7 +62,7 @@
         <form action="/months/edit/<?= $month->id ?>" method="POST" novalidate>
             <?= csrf_field() ?>
 
-            <div>
+            <div class="my-3">
                 <label for="month">Month:</label>
                 <input type="text" name="month" id="month" required value="<?= old('month', $month->month) ?>">
             </div>
@@ -72,9 +72,9 @@
                 <br>
             <?php endif; ?>
             
-            <div>
+            <div class="my-3">
                 <label for="year">Year:</label>
-                <input type="text" name="year" id="year" required value="<?= old('month', $month->month) ?>">
+                <input type="text" name="year" id="year" required value="<?= old('month', $month->year) ?>">
             </div>
 
             <?php if($errors->first('year')): ?>
@@ -82,7 +82,7 @@
                 <br>
             <?php endif; ?>
 
-            <button type="submit">Edit Month</button>
+            <button type="submit" class="btn btn-primary my-3">Edit Month</button>
         </form>
 
 
