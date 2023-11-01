@@ -70,8 +70,8 @@
                     <th scope="col">Action</th>
                     <th scope="col">Month</th>
                     <th scope="col">Year</th>
-                    <th scope="col">Asset</th>
-                    <th scope="col">Liability</th>
+                    <th scope="col">Net Worth ($)</th>
+                    <th scope="col">Cash Flow ($)</th>
                 </tr>
             </thead>
             <tbody>
@@ -82,7 +82,7 @@
                     <td><?= $value->year ?></td>
                     <!-- Display balance data if available -->
                         <?php if($value->balance): ?>
-                            <td><?= $value->balance->asset ?></td>
+                            <td><?= number_format($value->balance->asset - $value->balance->liability, 2, '.', ',') ?></td>
                             <td><?= $value->balance->liability ?></td>
                         <?php else: ?>
                             <!-- If no balance data is available, display placeholders or an empty cell -->
