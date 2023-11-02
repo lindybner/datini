@@ -94,7 +94,7 @@
         </form>
 
 
-        <a href="/months/list">Back to Cash Flows</a>
+        <a href="/flows/list">Back to Cash Flows</a>
     </div>
 
 </body>
