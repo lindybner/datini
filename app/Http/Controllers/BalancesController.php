@@ -48,4 +48,27 @@ class BalancesController extends Controller
         return redirect('/balances/list')
             ->with('message', 'New balance added.');
     }
+
+    public function editForm(Month $month)
+    {
+        return view('months.edit', [
+            'month' => $month,
+        ]);
+    }
+
+    public function edit(Month $month)
+    {
+        $attributes = request()->validate([
+            'month' => 'required',
+            'year' => 'required',
+        ]);
+
+
+        $month->month = $attributes['month'];
+        $month->year = $attributes['year'];
+        $month->save();
+
+        return redirect('/months/list')
+            ->with('message', 'Month edited.');
+    }
 }
