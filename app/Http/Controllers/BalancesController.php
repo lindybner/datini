@@ -49,26 +49,28 @@ class BalancesController extends Controller
             ->with('message', 'New balance added.');
     }
 
-    public function editForm(Month $month)
+    public function editForm(Balance $balance)
     {
-        return view('months.edit', [
-            'month' => $month,
+        return view('balances.edit', [
+            'balance' => $balance,
         ]);
     }
 
-    public function edit(Month $month)
+    public function edit(Balance $balance)
     {
         $attributes = request()->validate([
-            'month' => 'required',
-            'year' => 'required',
+            'month_id' => 'required',
+            'asset' => 'required',
+            'liability' => 'required',
         ]);
 
 
-        $month->month = $attributes['month'];
-        $month->year = $attributes['year'];
-        $month->save();
+        $balance->month_id = $attributes['month_id'];
+        $balance->asset = $attributes['asset'];
+        $balance->liability = $attributes['liability'];
+        $balance->save();
 
-        return redirect('/months/list')
-            ->with('message', 'Month edited.');
+        return redirect('/balances/list')
+            ->with('message', 'Balance edited.');
     }
 }
