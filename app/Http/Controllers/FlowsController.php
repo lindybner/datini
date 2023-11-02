@@ -39,11 +39,11 @@ class FlowsController extends Controller
             'outflow' => 'required',
         ]);
 
-        $balance = new Flow();
-        $balance->month_id = $attributes['month_id'];
-        $balance->inflow = $attributes['inflow'];
-        $balance->outflow = $attributes['outflow'];
-        $balance->save();
+        $flow = new Flow();
+        $flow->month_id = $attributes['month_id'];
+        $flow->inflow = $attributes['inflow'];
+        $flow->outflow = $attributes['outflow'];
+        $flow->save();
 
         return redirect('/flows/list')
             ->with('message', 'New cash flow added.');
