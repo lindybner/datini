@@ -48,4 +48,28 @@ class FlowsController extends Controller
         return redirect('/flows/list')
             ->with('message', 'New cash flow added.');
     }
+
+    public function editForm(Flow $flow)
+    {
+        return view('flows.edit', [
+            'flow' => $flow,
+        ]);
+    }
+
+    public function edit(Flow $flow)
+    {
+        $attributes = request()->validate([
+            'month_id' => 'required',
+            'inflow' => 'required',
+            'outflow' => 'required',
+        ]);
+
+        $flow->month_id = $attributes['month_id'];
+        $flow->inflow = $attributes['inflow'];
+        $flow->outflow = $attributes['outflow'];
+        $flow->save();
+
+        return redirect('/flows/list')
+            ->with('message', 'Cash flow edited.');
+    }
 }
