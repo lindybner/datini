@@ -58,26 +58,35 @@
     </header>
 
     <div class="container">
-        <form action="/months/add" method="POST" novalidate>
+        <form action="/balances/add" method="POST" novalidate>
             <?= csrf_field() ?>
 
             <div class="my-3">
-                <label for="month">Month:</label>
-                <input type="text" name="month" id="month">
+                <label for="month_id">Month:</label>
+                <select name="month_id" id="month_id" class="form-select">
+                    @foreach($months as $month)
+                        <option value="{{ $month->id }}">{{ $month->month }} {{ $month->year }}</option>
+                    @endforeach
+                </select>
             </div>
 
-            <?php if($errors->first('month')): ?>
-                <span class="text-danger"><?= $errors->first('month') ?></span>
+            <div class="my-3">
+                <label for="asset">Asset:</label>
+                <input type="number" name="asset" id="asset">
+            </div>
+
+            <?php if($errors->first('asset')): ?>
+                <span class="text-danger"><?= $errors->first('asset') ?></span>
                 <br>
             <?php endif; ?>
             
             <div class="my-3">
-                <label for="year">Year:</label>
-                <input type="text" name="year" id="year">
+                <label for="liability">Liability:</label>
+                <input type="number" name="liability" id="liability">
             </div>
 
-            <?php if($errors->first('year')): ?>
-                <span class="text-danger"><?= $errors->first('year') ?></span>
+            <?php if($errors->first('liability')): ?>
+                <span class="text-danger"><?= $errors->first('liability') ?></span>
                 <br>
             <?php endif; ?>
 
