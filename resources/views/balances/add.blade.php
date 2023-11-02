@@ -45,7 +45,7 @@
         </nav>
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Add a new month
+                Add a new balance
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
@@ -81,11 +81,11 @@
                 <br>
             <?php endif; ?>
 
-            <button type="submit" class="btn btn-primary my-3">Add Month</button>
+            <button type="submit" class="btn btn-primary my-3">Add Balance</button>
         </form>
 
 
-        <a href="/months/list">Back to Months</a>
+        <a href="/months/list">Back to Balances</a>
     </div>
 
 </body>

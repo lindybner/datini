@@ -36,10 +36,10 @@ class BalancesController extends Controller
             'year' => 'required',
         ]);
 
-        $month = new Month();
-        $month->month = $attributes['month'];
-        $month->year = $attributes['year'];
-        $month->save();
+        $balance = new Balance();
+        $balance->asset = $attributes['asset'];
+        $balance->liability = $attributes['liability'];
+        $balance->save();
 
         return redirect('/months/list')
             ->with('message', 'New month added.');
