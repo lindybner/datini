@@ -38,7 +38,8 @@ Route::post('/months/add', [MonthsController::class, 'add'])->middleware('auth')
 Route::get('/balances/add', [BalancesController::class, 'addForm'])->middleware('auth');
 Route::post('/balances/add', [BalancesController::class, 'add'])->middleware('auth');
 // Create - Flows
-
+Route::get('/flows/add', [FlowsController::class, 'addForm'])->middleware('auth');
+Route::post('/flows/add', [FlowsController::class, 'add'])->middleware('auth');
 
 // Read - Months
 Route::get('/months/list', [MonthsController::class, 'list'])->middleware('auth');
