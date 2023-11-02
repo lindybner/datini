@@ -32,8 +32,8 @@ class BalancesController extends Controller
     public function add()
     {
         $attributes = request()->validate([
-            'month' => 'required',
-            'year' => 'required',
+            'asset' => 'required',
+            'liability' => 'required',
         ]);
 
         $balance = new Balance();
