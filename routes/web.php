@@ -52,7 +52,8 @@ Route::get('/flows/list', [FlowsController::class, 'list'])->middleware('auth');
 Route::get('/months/edit/{month:id}', [MonthsController::class, 'editForm'])->where('month', '[0-9]+')->middleware('auth');
 Route::post('/months/edit/{month:id}', [MonthsController::class, 'edit'])->where('month', '[0-9]+')->middleware('auth');
 // Update - Balances
-
+Route::get('/balances/edit/{balance:id}', [BalancesController::class, 'editForm'])->where('balance', '[0-9]+')->middleware('auth');
+Route::post('/balances/edit/{balance:id}', [BalancesController::class, 'edit'])->where('balance', '[0-9]+')->middleware('auth');
 // Update - Flows
 
 
