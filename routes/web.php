@@ -35,8 +35,8 @@ Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 Route::get('/months/add', [MonthsController::class, 'addForm'])->middleware('auth');
 Route::post('/months/add', [MonthsController::class, 'add'])->middleware('auth');
 // Create - Balances
-Route::get('/balances/add', [MonthsController::class, 'addForm'])->middleware('auth');
-Route::post('/balances/add', [MonthsController::class, 'add'])->middleware('auth');
+Route::get('/balances/add', [BalancesController::class, 'addForm'])->middleware('auth');
+Route::post('/balances/add', [BalancesController::class, 'add'])->middleware('auth');
 // Create - Flows
 
 
