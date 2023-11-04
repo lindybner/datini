@@ -58,7 +58,7 @@
     </header>
 
     <div class="container">
-        <form action="/balances/add" method="POST" novalidate>
+        <form action="/balances/edit/<?= $balance->id ?>" method="POST" novalidate>
             <?= csrf_field() ?>
 
             <div class="my-3">
@@ -72,7 +72,7 @@
 
             <div class="my-3">
                 <label for="asset">Asset:</label>
-                <input type="number" name="asset" id="asset">
+                <input type="number" name="asset" id="asset" value="<?= old('asset', $balance->asset) ?>">
             </div>
 
             <?php if($errors->first('asset')): ?>
@@ -82,7 +82,7 @@
             
             <div class="my-3">
                 <label for="liability">Liability:</label>
-                <input type="number" name="liability" id="liability">
+                <input type="number" name="liability" id="liability" value="<?= old('asset', $balance->asset) ?>">
             </div>
 
             <?php if($errors->first('liability')): ?>
