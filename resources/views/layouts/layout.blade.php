@@ -39,16 +39,16 @@
                     @guest
                     <!-- Show "Log in" if the user is not authenticated (guest) -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/login"><span class="text-primary">Login</span></a>
                     </li>
                     <!-- Show "Register" if the user is not authenticated (guest) -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/register">Register</a>
+                        <a class="nav-link" href="/register"><span class="text-danger">Register</span></a>
                     </li>
                     @else
                     <!-- Show "Log out" if the user is authenticated -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Logout</a>
+                        <a class="nav-link" href="/logout"><span class="text-danger">Logout</span></a>
                     </li>
                     @endguest
                 </ul>
