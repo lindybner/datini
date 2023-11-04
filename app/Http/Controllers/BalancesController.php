@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Balance;
 use App\Models\Month;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class BalancesController extends Controller
@@ -12,9 +13,9 @@ class BalancesController extends Controller
 
     public function list()
     {
-        return view('balances.list', [
-            'balances' => Balance::all()
-        ]);
+        $user = Auth::user();
+        $balances = Balance::where('user_id', $user->id)->get();
+        return view('balances.list', compact('balances'));
     }
 
     public function delete(Balance $balance)
