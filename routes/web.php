@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Dashboard
+// Dashboard/Homepage
 Route::get('/', [AppController::class, 'home'])->middleware('auth');
 Route::get('/home', [AppController::class, 'home'])->middleware('auth');
 Route::get('/dashboard', [AppController::class, 'home'])->middleware('auth');
