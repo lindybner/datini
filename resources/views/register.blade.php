@@ -11,18 +11,26 @@
         <form action="/register" method="post">
             @csrf
             <div class="mb-3">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" placeholder="Enter your username" value="{{ old('username') }}">
-                @error('username')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+                <div>
+                    <label for="username">Username:</label>
+                </div>
+                <div>
+                    <input type="text" name="username" id="username" placeholder="username" value="{{ old('username') }}">
+                    @error('username')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
             </div>
             <div class="mb-3">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password">
-                @error('password')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+                <div>
+                    <label for="password">Password:</label>
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="password">
+                    @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
             </div>
             <button type="submit" class="btn btn-outline-primary btn-lg">Register</button>
         </form>
