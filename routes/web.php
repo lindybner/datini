@@ -22,9 +22,9 @@ Route::get('/', function () {
 });
 
 // Dashboard
-Route::get('/', [AppController::class, 'dashboard'])->middleware('auth');
-Route::get('/home', [AppController::class, 'dashboard'])->middleware('auth');
-Route::get('/dashboard', [AppController::class, 'dashboard'])->middleware('auth');
+Route::get('/', [AppController::class, 'home'])->middleware('auth');
+Route::get('/home', [AppController::class, 'home'])->middleware('auth');
+Route::get('/dashboard', [AppController::class, 'home'])->middleware('auth');
 
 // Login - Display Form
 Route::get('/login', [AppController::class, 'loginForm'])->middleware('guest')->name('login');
