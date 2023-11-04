@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    // Return Dashboard view
-    public function dashboard()
+    // Return Homepage view
+    public function home()
     {
-        return view('dashboard');
+        return view('home');
     }
 
     // Return Login Form view
