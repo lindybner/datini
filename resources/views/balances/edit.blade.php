@@ -82,7 +82,7 @@
             
             <div class="my-3">
                 <label for="liability">Liability:</label>
-                <input type="number" name="liability" id="liability" value="<?= old('asset', $balance->asset) ?>">
+                <input type="number" name="liability" id="liability" value="<?= old('liability', $balance->liability) ?>">
             </div>
 
             <?php if($errors->first('liability')): ?>
