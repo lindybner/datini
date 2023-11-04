@@ -32,18 +32,23 @@ class MonthsController extends Controller
 
     public function add()
     {
+        $user = Auth::user(); // Get the currently authenticated user
+
         $attributes = request()->validate([
             'month' => 'required',
             'year' => 'required',
         ]);
 
-        $month = new Month();
-        $month->month = $attributes['month'];
-        $month->year = $attributes['year'];
-        $month->save();
+        // Create a new Month instance and associate it with the user ID
+        $month = new Month([
+            'month' => $attributes['month'],
+            'year' => $attributes['year'],
+            'user_id' => $user->id,
+        ]);
 
-        return redirect('/months/list')
-            ->with('message', 'New month added.');
+        $month->save(); // Save the month record
+
+        return redirect('/months/list')->with('message', 'New month added.');
     }
 
     public function editForm(Month $month)
