@@ -22,6 +22,7 @@ Route::get('/', function () {
 });
 
 // Dashboard
+Route::get('/', [AppController::class, 'dashboard'])->middleware('auth');
 Route::get('/dashboard', [AppController::class, 'dashboard'])->middleware('auth');
 
 // Login - Display Form
