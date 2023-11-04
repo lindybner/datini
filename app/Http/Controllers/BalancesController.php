@@ -34,20 +34,25 @@ class BalancesController extends Controller
 
     public function add()
     {
+        $user = Auth::user(); // Get the currently authenticated user
+
         $attributes = request()->validate([
             'month_id' => 'required',
             'asset' => 'required',
             'liability' => 'required',
         ]);
 
-        $balance = new Balance();
-        $balance->month_id = $attributes['month_id'];
-        $balance->asset = $attributes['asset'];
-        $balance->liability = $attributes['liability'];
-        $balance->save();
+        // Create a new Balance instance and associate it with the user ID and month ID
+        $balance = new Balance([
+            'month_id' => $attributes['month_id'],
+            'asset' => $attributes['asset'],
+            'liability' => $attributes['liability'],
+            'user_id' => $user->id,
+        ]);
 
-        return redirect('/balances/list')
-            ->with('message', 'New balance added.');
+        $balance->save(); // Save the balance record
+
+        return redirect('/balances/list')->with('message', 'New balance added.');
     }
 
     public function editForm(Balance $balance)
