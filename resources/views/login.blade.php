@@ -7,13 +7,6 @@
             <h1>
                 Login
             </h1>
-            <?php if(Auth::check()): ?>
-                Logged in as
-                <strong><?= auth()->user()->username ?></strong>!
-
-            <?php else: ?>
-                <a href="/">Return to Homepage</a>
-            <?php endif; ?>
         </div>
     </header>
 

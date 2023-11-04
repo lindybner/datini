@@ -3,9 +3,11 @@
 @section('title', 'Register')
 
 @section('content')
-    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
-        <h1>Register</h1>
-
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
+            <h1>Register</h1>
+        </div>
+    </header>
+    <section class="p-3 m-5 border border-primary-subtle rounded-3">
         <form action="/register" method="post">
             @csrf
             <div class="mb-3">
@@ -24,5 +26,6 @@
             </div>
             <button type="submit" class="btn btn-outline-primary btn-lg">Register</button>
         </form>
-    </div>
+    </section>
+    
 @endsection
