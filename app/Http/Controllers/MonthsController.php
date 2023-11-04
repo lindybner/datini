@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Month;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class MonthsController extends Controller
@@ -11,9 +12,9 @@ class MonthsController extends Controller
 
     public function list()
     {
-        return view('months.list', [
-            'months' => Month::all()
-        ]);
+        $user = Auth::user();
+        $months = Month::where('user_id', $user->id)->get();
+        return view('months.list', compact('months'));
     }
 
     public function delete(Month $month)
