@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Flow;
 use App\Models\Month;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class FlowsController extends Controller
@@ -12,9 +13,9 @@ class FlowsController extends Controller
 
     public function list()
     {
-        return view('flows.list', [
-            'flows' => Flow::all()
-        ]);
+        $user = Auth::user();
+        $flows = Flow::where('user_id', $user->id)->get();
+        return view('flows.list', compact('flows'));
     }
 
     public function delete(Flow $flow)
