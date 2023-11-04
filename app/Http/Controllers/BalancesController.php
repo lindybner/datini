@@ -51,9 +51,8 @@ class BalancesController extends Controller
 
     public function editForm(Balance $balance)
     {
-        return view('balances.edit', [
-            'balance' => $balance,
-        ]);
+        $months = Month::all();
+        return view('balances.edit', compact('balance', 'months'));
     }
 
     public function edit(Balance $balance)
