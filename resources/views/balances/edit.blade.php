@@ -45,7 +45,7 @@
         </nav>
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Edit a month
+                Edit a balance
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
@@ -58,35 +58,43 @@
     </header>
 
     <div class="container">
-        <h2>Edit: <?= $month->month ?> <?= $month->year ?></h2>
-        <form action="/months/edit/<?= $month->id ?>" method="POST" novalidate>
+        <form action="/balances/add" method="POST" novalidate>
             <?= csrf_field() ?>
 
             <div class="my-3">
-                <label for="month">Month:</label>
-                <input type="text" name="month" id="month" required value="<?= old('month', $month->month) ?>">
+                <label for="month_id">Month:</label>
+                <select name="month_id" id="month_id" class="form-select">
+                    @foreach($months as $month)
+                        <option value="{{ $month->id }}">{{ $month->month }} {{ $month->year }}</option>
+                    @endforeach
+                </select>
             </div>
 
-            <?php if($errors->first('month')): ?>
-                <span class="text-danger"><?= $errors->first('month') ?></span>
+            <div class="my-3">
+                <label for="asset">Asset:</label>
+                <input type="number" name="asset" id="asset">
+            </div>
+
+            <?php if($errors->first('asset')): ?>
+                <span class="text-danger"><?= $errors->first('asset') ?></span>
                 <br>
             <?php endif; ?>
             
             <div class="my-3">
-                <label for="year">Year:</label>
-                <input type="text" name="year" id="year" required value="<?= old('month', $month->year) ?>">
+                <label for="liability">Liability:</label>
+                <input type="number" name="liability" id="liability">
             </div>
 
-            <?php if($errors->first('year')): ?>
-                <span class="text-danger"><?= $errors->first('year') ?></span>
+            <?php if($errors->first('liability')): ?>
+                <span class="text-danger"><?= $errors->first('liability') ?></span>
                 <br>
             <?php endif; ?>
 
-            <button type="submit" class="btn btn-primary my-3">Edit Month</button>
+            <button type="submit" class="btn btn-primary my-3">Add Balance</button>
         </form>
 
 
-        <a href="/months/list">Back to Months</a>
+        <a href="/balances/list">Back to Balances</a>
     </div>
 
 </body>
