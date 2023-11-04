@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         Balance::truncate();
         Flow::truncate();
 
-        User::factory()->count(1)->create();
+        User::factory()->count(3)->create();
         Month::factory()->count(5)->create();
         Balance::factory()->count(5)->create();
         Flow::factory()->count(5)->create();
