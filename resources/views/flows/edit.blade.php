@@ -90,7 +90,7 @@
                 <br>
             <?php endif; ?>
 
-            <button type="submit" class="btn btn-primary my-3">Edit Balance</button>
+            <button type="submit" class="btn btn-primary my-3">Edit Cash Flow</button>
         </form>
 
 
