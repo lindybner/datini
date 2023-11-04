@@ -20,6 +20,12 @@ class Month extends Model
         'user_id', // Assuming you have a user_id field in your months table
     ];
 
+    // Define the relationship with the User model
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     // Define the relationship with the Balance model
     public function balance()
     {

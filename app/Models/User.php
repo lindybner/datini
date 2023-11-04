@@ -41,4 +41,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // Define the relationship with the Month model
+    public function months()
+    {
+        return $this->hasMany(Month::class);
+    }
 }

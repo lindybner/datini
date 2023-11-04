@@ -28,13 +28,15 @@ class BalancesController extends Controller
 
     public function addForm()
     {
-        $months = Month::all();
+        $user = auth()->user();
+        $months = $user->months ?? collect(); // Use the null coalescing operator to handle null value
         return view('balances.add', compact('months'));
     }
 
+
     public function add()
     {
-        $user = Auth::user(); // Get the currently authenticated user
+        $user = auth()->user(); // Get the currently authenticated user
 
         $attributes = request()->validate([
             'month_id' => 'required',
@@ -42,18 +44,25 @@ class BalancesController extends Controller
             'liability' => 'required',
         ]);
 
-        // Create a new Balance instance and associate it with the user ID and month ID
-        $balance = new Balance([
-            'month_id' => $attributes['month_id'],
-            'asset' => $attributes['asset'],
-            'liability' => $attributes['liability'],
-            'user_id' => $user->id,
-        ]);
+        // Check if the selected month belongs to the authenticated user
+        if ($user->months->contains('id', $attributes['month_id'])) {
+            // Create a new Balance instance and associate it with the user ID and month ID
+            $balance = new Balance([
+                'month_id' => $attributes['month_id'],
+                'asset' => $attributes['asset'],
+                'liability' => $attributes['liability'],
+                'user_id' => $user->id,
+            ]);
 
-        $balance->save(); // Save the balance record
+            $balance->save(); // Save the balance record
 
-        return redirect('/balances/list')->with('message', 'New balance added.');
+            return redirect('/balances/list')->with('message', 'New balance added.');
+        } else {
+            // Handle the case where the selected month does not belong to the authenticated user
+            return redirect('/balances/add')->withErrors(['month_id' => 'Invalid month selected.']);
+        }
     }
+
 
     public function editForm(Balance $balance)
     {
