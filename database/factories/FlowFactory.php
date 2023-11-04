@@ -21,7 +21,7 @@ class FlowFactory extends Factory
         return [
             'inflow' => $this->faker->randomFloat(2, 1000, 100000), // Generate a random inflow amount with 2 decimal places
             'outflow' => $this->faker->randomFloat(2, 500, 50000), // Generate a random outflow amount with 2 decimal places
-            // 'user_id' => User::all()->random(), // Grab a random id from User
+            'user_id' => User::all()->random(), // Grab a random id from User
             'month_id' => Month::all()->random(), // Grab a random id from Month
         ];
     }
