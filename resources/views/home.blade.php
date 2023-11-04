@@ -4,7 +4,7 @@
 
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Dashboard
+                Welcome!
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
