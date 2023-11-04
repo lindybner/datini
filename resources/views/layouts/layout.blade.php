@@ -36,9 +36,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/flows/list">Flows</a>
                     </li>
+                    @guest
+                    <!-- Show "Log in" if the user is not authenticated (guest) -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    @else
+                    <!-- Show "Log out" if the user is authenticated -->
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Logout</a>
                     </li>
+                    @endguest
                 </ul>
                 </div>
             </div>
