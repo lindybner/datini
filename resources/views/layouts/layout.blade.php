@@ -41,6 +41,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
+                    <!-- Show "Register" if the user is not authenticated (guest) -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
                     @else
                     <!-- Show "Log out" if the user is authenticated -->
                     <li class="nav-item">
