@@ -51,9 +51,8 @@ class FlowsController extends Controller
 
     public function editForm(Flow $flow)
     {
-        return view('flows.edit', [
-            'flow' => $flow,
-        ]);
+        $months = Month::all();
+        return view('flows.edit', compact('flow', 'months'));
     }
 
     public function edit(Flow $flow)
