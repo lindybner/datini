@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
@@ -10,6 +11,31 @@ class AppController extends Controller
     public function home()
     {
         return view('home');
+    }
+
+    // Show registration form
+    public function registerForm()
+    {
+        return view('register');
+    }
+
+    // Handle registration form submission
+    public function register(Request $request)
+    {
+        $request->validate([
+            'username' => 'required|unique:users',
+            'password' => 'required|min:6',
+        ]);
+
+        User::create([
+            'username' => $request->input('username'),
+            'password' => bcrypt($request->input('password')),
+        ]);
+
+        // Automatically log in the user after registration
+        auth()->attempt($request->only('username', 'password'));
+
+        return redirect('/dashboard');
     }
 
     // Return Login Form view

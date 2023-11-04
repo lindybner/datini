@@ -27,11 +27,15 @@ Route::get('/home', [AppController::class, 'home'])->middleware('auth');
 Route::get('/dashboard', [AppController::class, 'home'])->middleware('auth');
 
 // Register - Display Form
+Route::get('/register', [AppController::class, 'registerForm']);
 // Register - Process Form
+Route::post('/register', [AppController::class, 'register']);
+
 // Login - Display Form
 Route::get('/login', [AppController::class, 'loginForm'])->middleware('guest')->name('login');
 // Login - Process Form
 Route::post('/login', [AppController::class, 'login'])->middleware('guest');
+
 // Logout
 Route::get('/logout', [AppController::class, 'logout'])->middleware('auth');
 
