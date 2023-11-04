@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Overview &amp; Months')
+@section('title', 'Overview & Months')
 
 @section('content')
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
