@@ -34,20 +34,25 @@ class FlowsController extends Controller
 
     public function add()
     {
+        $user = Auth::user(); // Get the currently authenticated user
+
         $attributes = request()->validate([
             'month_id' => 'required',
             'inflow' => 'required',
             'outflow' => 'required',
         ]);
 
-        $flow = new Flow();
-        $flow->month_id = $attributes['month_id'];
-        $flow->inflow = $attributes['inflow'];
-        $flow->outflow = $attributes['outflow'];
-        $flow->save();
+        // Create a new Flow instance and associate it with the user ID and month ID
+        $flow = new Flow([
+            'month_id' => $attributes['month_id'],
+            'inflow' => $attributes['inflow'],
+            'outflow' => $attributes['outflow'],
+            'user_id' => $user->id,
+        ]);
 
-        return redirect('/flows/list')
-            ->with('message', 'New cash flow added.');
+        $flow->save(); // Save the flow record
+
+        return redirect('/flows/list')->with('message', 'New cash flow added.');
     }
 
     public function editForm(Flow $flow)
