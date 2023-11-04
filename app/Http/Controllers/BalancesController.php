@@ -57,7 +57,8 @@ class BalancesController extends Controller
 
     public function editForm(Balance $balance)
     {
-        $months = Month::all();
+        $user = auth()->user();
+        $months = $user->months;
         return view('balances.edit', compact('balance', 'months'));
     }
 
