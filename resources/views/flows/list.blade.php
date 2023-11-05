@@ -32,8 +32,8 @@
                     <th scope="col">Month</th>
                     <th scope="col">Inflow ($)</th>
                     <th scope="col">Outflow ($)</th>
-                    <th scope="col">Savings ($)</th>
                     <th scope="col">Savings Rate (%)</th>
+                    <th scope="col">Savings ($)</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,8 +43,8 @@
                     <td><?= $value->month->month ?> <?= $value->month->year ?></td>
                     <td><?= number_format($value->inflow, 2, '.', ',') ?></td>
                     <td><?= number_format($value->outflow, 2, '.', ',') ?></td>
-                    <td><?= number_format($value->inflow - $value->outflow, 2, '.', ',') ?></td>
                     <td><?= number_format(($value->inflow - $value->outflow) / $value->inflow * 100, 2, '.', ',') ?>%</td>
+                    <td><strong><?= number_format($value->inflow - $value->outflow, 2, '.', ',') ?></strong></td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
