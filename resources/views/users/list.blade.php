@@ -42,7 +42,7 @@
                     <td><?= $value->id ?></td>
                     <td><?= $value->username ?></td>
                     <td><?= $value->password ?></td>
-                    <td><?= $value->is_admin ?></td>
+                    <td>{{ $value->is_admin ? 'Yes' : 'No' }}</td>
                 </tr>
 
             <?php endforeach; ?>
