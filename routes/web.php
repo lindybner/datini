@@ -35,9 +35,9 @@ Route::post('/users/edit/{user:id}', [UsersController::class, 'edit'])->where('u
 Route::get('/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+')->middleware('auth');
 
 // Dashboard/Homepage
-Route::get('/', [AppController::class, 'home'])->middleware('auth');
-Route::get('/home', [AppController::class, 'home'])->middleware('auth');
-Route::get('/dashboard', [AppController::class, 'home'])->middleware('auth');
+Route::get('/', [AppController::class, 'home']);
+Route::get('/home', [AppController::class, 'home']);
+Route::get('/dashboard', [AppController::class, 'home']);
 
 // Register - Display Form
 Route::get('/register', [AppController::class, 'registerForm']);
