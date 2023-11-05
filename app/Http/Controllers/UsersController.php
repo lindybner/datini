@@ -44,4 +44,11 @@ class UsersController extends Controller
         return redirect('/users/list')
             ->with('message', 'New user created.');
     }
+
+    public function editForm(User $user)
+    {
+        return view('users.edit', [
+            'user' => $user
+        ]);
+    }
 }
