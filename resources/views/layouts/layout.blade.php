@@ -53,7 +53,7 @@
                     <!-- Show "Admin" if the user is authenticated and has is_admin set to true -->
                     @if(auth()->user()->is_admin)
                     <li class="nav-item">
-                        <a class="nav-link" href="/users/list"><span class="text-success">Admin</span></a>
+                        <a class="nav-link" href="/users/list"><span class="text-primary">Admin</span></a>
                     </li>
                     @endif
                     @endguest
