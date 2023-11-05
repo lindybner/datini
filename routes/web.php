@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AppController;
 use App\Http\Controllers\BalancesController;
 use App\Http\Controllers\FlowsController;
 use App\Http\Controllers\MonthsController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 // Admin
-Route::get('/admin/list', [AdminController::class, 'list'])->middleware('auth');
+Route::get('/users/list', [UsersController::class, 'list'])->middleware('auth');
 
 // Dashboard/Homepage
 Route::get('/', [AppController::class, 'home'])->middleware('auth');
