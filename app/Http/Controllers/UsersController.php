@@ -36,6 +36,12 @@ class UsersController extends Controller
             'password' => 'required',
         ]);
 
-        ddd('Add User');
+        $user = new User();
+        $user->username = $attributes['username'];
+        $user->password = $attributes['password'];
+        $user->save();
+
+        return redirect('/users/list')
+            ->with('message', 'New user created.');
     }
 }
