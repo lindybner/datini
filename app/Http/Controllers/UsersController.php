@@ -51,4 +51,19 @@ class UsersController extends Controller
             'user' => $user
         ]);
     }
+
+    public function edit(User $user)
+    {
+        $attributes = request()->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $user->username = $attributes['username'];
+        $user->password = $attributes['password'];
+        $user->save();
+
+        return redirect('/users/list')
+            ->with('message', 'User edited.');
+    }
 }
