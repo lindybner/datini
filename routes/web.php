@@ -28,6 +28,9 @@ Route::get('/users/add', [UsersController::class, 'addForm'])->middleware('auth'
 Route::post('/users/add', [UsersController::class, 'add'])->middleware('auth');
 // Admin - Read
 Route::get('/users/list', [UsersController::class, 'list'])->middleware('auth');
+// Admin - Update
+Route::get('/users/edit/{user:id}', [UsersController::class, 'editForm'])->where('user', '[0-9]+')->middleware('auth');
+Route::post('/users/edit/{user:id}', [UsersController::class, 'edit'])->where('user', '[0-9]+')->middleware('auth');
 // Admin - Delete
 Route::get('/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+')->middleware('auth');
 
