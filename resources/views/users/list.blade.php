@@ -40,7 +40,7 @@
                     <td><a href="/users/edit/<?= $value->id ?>">Edit</a> | <a class="text-danger" href="/users/delete/<?= $value->id ?>">Delete</a></td>
                     <td><?= $value->id ?></td>
                     <td><?= $value->username ?></td>
-                    <td><span class="is-admin"><?= $value->is_admin ?></span></td>
+                    <td><?= $value->is_admin ?></td>
                 </tr>
 
             <?php endforeach; ?>
