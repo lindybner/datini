@@ -18,34 +18,34 @@
     </header>
 
     <div class="container">
-        <form action="/months/add" method="POST" novalidate>
+        <form action="/users/add" method="POST" novalidate>
             <?= csrf_field() ?>
 
             <div class="my-3">
-                <label for="month">Month:</label>
-                <input type="text" name="month" id="month">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
             </div>
 
-            <?php if($errors->first('month')): ?>
-                <span class="text-danger"><?= $errors->first('month') ?></span>
+            <?php if($errors->first('username')): ?>
+                <span class="text-danger"><?= $errors->first('username') ?></span>
                 <br>
             <?php endif; ?>
             
             <div class="my-3">
-                <label for="year">Year:</label>
-                <input type="text" name="year" id="year">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
             </div>
 
-            <?php if($errors->first('year')): ?>
-                <span class="text-danger"><?= $errors->first('year') ?></span>
+            <?php if($errors->first('password')): ?>
+                <span class="text-danger"><?= $errors->first('password') ?></span>
                 <br>
             <?php endif; ?>
 
-            <button type="submit" class="btn btn-primary my-3">Add Month</button>
+            <button type="submit" class="btn btn-primary my-3">Create User</button>
         </form>
 
 
-        <a href="/months/list">Back to Months</a>
+        <a href="/users/list">Back to Users</a>
     </div>
 
 </body>
