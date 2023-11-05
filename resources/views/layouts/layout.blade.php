@@ -34,7 +34,7 @@
                         <a class="nav-link" href="/balances/list">Balances</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/flows/list">Cash Flows</a>
+                        <a class="nav-link" href="/flows/list">Flows</a>
                     </li>
                     @guest
                     <!-- Show "Log in" if the user is not authenticated (guest) -->
