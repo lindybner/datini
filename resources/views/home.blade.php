@@ -42,7 +42,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">Step 3</h2>
-                        <p class="card-text"><strong>Cash Flow:</strong> Finally, figure out your cashflow: Enter the amount for your inflow (what you've earned) and outflow (what you've spent).</p>
+                        <p class="card-text"><strong>Cash Flow:</strong> Finally, figure out your cashflow &mdash; enter the amount for your inflow (what you've earned) and outflow (what you've spent).</p>
                         <a class="btn btn-primary" href="/flows/list" role="button">Flows</a>
                     </div>
                 </div>
