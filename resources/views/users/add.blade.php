@@ -41,6 +41,11 @@
                 <br>
             <?php endif; ?>
 
+            <div class="my-3 form-check">
+                <input type="checkbox" class="form-check-input" id="is_admin" name="is_admin" value="1">
+                <label class="form-check-label" for="is_admin">Is Admin</label>
+            </div>
+
             <button type="submit" class="btn btn-primary my-3">Create User</button>
         </form>
 
