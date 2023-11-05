@@ -23,6 +23,9 @@ Route::get('/', function () {
 });
 
 
+// Admin - Create
+Route::get('/users/add', [UsersController::class, 'addForm'])->middleware('auth');
+Route::post('/users/add', [UsersController::class, 'add'])->middleware('auth');
 // Admin - Read
 Route::get('/users/list', [UsersController::class, 'list'])->middleware('auth');
 // Admin - Delete
