@@ -23,4 +23,9 @@ class UsersController extends Controller
         return redirect('/users/list')
             ->with('message', 'User has been deleted.');
     }
+
+    public function addForm()
+    {
+        return view('users.add');
+    }
 }
