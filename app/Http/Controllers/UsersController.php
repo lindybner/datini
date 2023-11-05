@@ -28,4 +28,14 @@ class UsersController extends Controller
     {
         return view('users.add');
     }
+
+    public function add()
+    {
+        $attributes = request()->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        ddd('Add User');
+    }
 }
