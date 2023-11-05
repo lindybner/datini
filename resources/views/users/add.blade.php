@@ -23,7 +23,7 @@
 
             <div class="my-3">
                 <label for="username">Username:</label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="username" id="username" value="<?= old('username')">
             </div>
 
             <?php if($errors->first('username')): ?>
@@ -33,7 +33,7 @@
             
             <div class="my-3">
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" value="<?= old('password')">
             </div>
 
             <?php if($errors->first('password')): ?>
