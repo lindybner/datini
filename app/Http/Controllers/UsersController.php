@@ -59,10 +59,12 @@ class UsersController extends Controller
         $attributes = request()->validate([
             'username' => 'required',
             'password' => 'required',
+            'is_admin' => 'nullable|boolean', // Validation for is_admin attribute
         ]);
 
         $user->username = $attributes['username'];
         $user->password = $attributes['password'];
+        $user->is_admin = $attributes['is_admin'] ?? false; // Set is_admin to false if not provided
         $user->save();
 
         return redirect('/users/list')
