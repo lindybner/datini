@@ -1,5 +1,7 @@
 # Datini - Personal Finance Management Web App
 
+_In 3 simple steps, get all your personal finances in order!_
+
 Datini is a web application designed to help you manage your personal finances with ease. With Datini, you can keep track of your monthly income, expenses, and overall financial health. Here's how you can get started with Datini:
 
 ## Features
