@@ -51,7 +51,7 @@
                             <div>Step 3:</div>
                             <div>Cash Inflow &amp; Outflow</div>
                         </h2>
-                        <p class="card-text">Finally, figure out your cashflow &mdash; enter the amount for your inflow (what you've earned) and outflow (what you've spent).</p>
+                        <p class="card-text">Finally, figure out your cash flow &mdash; enter the amount for your inflow (what you've earned) and outflow (what you've spent).</p>
                         <a class="btn btn-primary" href="/flows/list" role="button">Flows</a>
                     </div>
                 </div>
