@@ -13,8 +13,8 @@ Datini is a web application designed to help you manage your personal finances w
 
 ## Usage
 
--   **Login:** Sign in to your account using your username and password.
--   **Dashboard:** View an overview of your financial records and navigate to different sections.
+-   **Login:** Sign in to your account using your username and password (or create an account if you don't have one yet).
+-   **Homepage:** An introduction to the app and how navigate to different sections.
 -   **Months:** Add, edit, and delete monthly records.
 -   **Balances:** Manage your asset and liability records.
 -   **Flows:** Track your inflows and outflows.
