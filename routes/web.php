@@ -22,8 +22,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Admin
+
+// Admin - Read
 Route::get('/users/list', [UsersController::class, 'list'])->middleware('auth');
+// Admin - Delete
+Route::get('/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+')->middleware('auth');
 
 // Dashboard/Homepage
 Route::get('/', [AppController::class, 'home'])->middleware('auth');
