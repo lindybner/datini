@@ -15,4 +15,12 @@ class UsersController extends Controller
             'users' => User::all()
         ]);
     }
+
+    public function delete(User $user)
+    {
+        $user->delete();
+
+        return redirect('/users/list')
+            ->with('message', 'User has been deleted.');
+    }
 }
