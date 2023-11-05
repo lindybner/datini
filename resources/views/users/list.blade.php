@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Overview & Months')
+@section('title', 'Manage Users')
 
 @section('content')
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
