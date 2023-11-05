@@ -13,7 +13,7 @@
                 <strong><?= auth()->user()->username ?></strong>!
 
             <?php else: ?>
-                <a href="/login">Log in to do more.</a>
+                <a href="/login">Login</a> or <a href="/register">signup</a> to do more!
             <?php endif; ?>
         </div>
     </header>
