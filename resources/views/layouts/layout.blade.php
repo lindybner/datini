@@ -71,7 +71,7 @@
     <div class="container">
         <footer class="py-3 mt-5 mb-4 border-top text-center">
             <div class="mb-3 mb-md-0 text-muted">Copyright &copy; {{ date('Y') }} <a href="http://lindybner.com" target="_blank">Jim Lin-Dybner</a>.</div>
-            <div>All Rights Reserved</div>
+            <div class="mb-3 mb-md-0 text-muted">All Rights Reserved</div>
         </footer>
     </div>
 </body>
