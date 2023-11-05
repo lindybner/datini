@@ -30,7 +30,7 @@
                     <th scope="col">Action</th>
                     <th scope="col">ID</th>
                     <th scope="col">Username</th>
-                    <th scope="col">Password</th>
+                    <th scope="col">Password (Encrypted)</th>
                     <th scope="col">Admin</th>
                 </tr>
             </thead>
