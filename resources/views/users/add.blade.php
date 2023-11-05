@@ -45,7 +45,7 @@
         </form>
 
 
-        <a href="/users/list">Back to Users</a>
+        <a href="/users/list">Back to Manage Users</a>
     </div>
 
 </body>
