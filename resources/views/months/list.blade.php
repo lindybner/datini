@@ -58,7 +58,12 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="/months/add">Add a new month</a>
+        <div>
+            <a href="/months/add">Add a new month</a>
+        </div>
+        <div class="my-3">
+            <a href="/balances/list">On to step 2 &raquo;</a>
+        </div>
     </div>
 
 </body>
