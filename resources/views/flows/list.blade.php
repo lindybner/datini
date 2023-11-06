@@ -52,7 +52,7 @@
         <a href="/flows/add">Add a new cash flow record</a>
 
         <div class="my-3">
-            <a class="btn btn-primary" href="/flows/list">&laquo; Back to step 2</a>
+            <a class="btn btn-primary" href="/balances/list">&laquo; Back to step 2</a>
         </div>
     </div>
 
