@@ -62,7 +62,7 @@
             <a href="/months/add">Add a new month</a>
         </div>
         <div class="my-3">
-            <a href="/balances/list">On to step 2 &raquo;</a>
+            <a class="btn btn-primary" href="/balances/list">On to step 2 &raquo;</a>
         </div>
     </div>
 
