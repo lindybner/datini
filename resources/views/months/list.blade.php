@@ -5,7 +5,7 @@
 @section('content')
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Step 1: Overview &amp; Months
+                Step 1: Overview &amp; Months (Set the Time Period)
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
