@@ -6,7 +6,7 @@
 
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Step 2: Balances
+                Step 2: Balances (Asset &amp; Liability)
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
