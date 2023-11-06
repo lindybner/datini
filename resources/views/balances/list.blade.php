@@ -49,7 +49,12 @@
             <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="/balances/add">Add a new balance record</a>
+        <div>
+            <a href="/balances/add">Add a new balance record</a>
+        </div>
+        <div class="my-3">
+            <a class="btn btn-primary" href="/months/list">&laquo; Back to step 1</a> <a class="btn btn-primary" href="/flows/list">On to step 3 &raquo;</a>
+        </div>
     </div>
 
 </body>
