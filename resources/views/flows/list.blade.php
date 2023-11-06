@@ -6,7 +6,7 @@
 
         <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
             <h1>
-                Cash Flows
+                Step 3: Cash Flows (Inflow &amp; Outflow)
             </h1>
             <?php if(Auth::check()): ?>
                 Logged in as
