@@ -22,18 +22,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
-// Admin - Create
-Route::get('/users/add', [UsersController::class, 'addForm'])->middleware('auth');
-Route::post('/users/add', [UsersController::class, 'add'])->middleware('auth');
-// Admin - Read
-Route::get('/users/list', [UsersController::class, 'list'])->middleware('auth');
-// Admin - Update
-Route::get('/users/edit/{user:id}', [UsersController::class, 'editForm'])->where('user', '[0-9]+')->middleware('auth');
-Route::post('/users/edit/{user:id}', [UsersController::class, 'edit'])->where('user', '[0-9]+')->middleware('auth');
-// Admin - Delete
-Route::get('/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+')->middleware('auth');
-
 // Dashboard/Homepage
 Route::get('/', [AppController::class, 'home']);
 Route::get('/home', [AppController::class, 'home']);
@@ -85,3 +73,14 @@ Route::get('/months/delete/{month:id}', [MonthsController::class, 'delete'])->wh
 Route::get('/balances/delete/{balance:id}', [BalancesController::class, 'delete'])->where('balance', '[0-9]+')->middleware('auth');
 // Delete - Flows
 Route::get('/flows/delete/{flow:id}', [FlowsController::class, 'delete'])->where('flow', '[0-9]+')->middleware('auth');
+
+// Admin - Create
+Route::get('/users/add', [UsersController::class, 'addForm'])->middleware('auth');
+Route::post('/users/add', [UsersController::class, 'add'])->middleware('auth');
+// Admin - Read
+Route::get('/users/list', [UsersController::class, 'list'])->middleware('auth');
+// Admin - Update
+Route::get('/users/edit/{user:id}', [UsersController::class, 'editForm'])->where('user', '[0-9]+')->middleware('auth');
+Route::post('/users/edit/{user:id}', [UsersController::class, 'edit'])->where('user', '[0-9]+')->middleware('auth');
+// Admin - Delete
+Route::get('/users/delete/{user:id}', [UsersController::class, 'delete'])->where('user', '[0-9]+')->middleware('auth');
