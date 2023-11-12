@@ -1,10 +1,10 @@
 # Datini - Personal Finance Management Web App
 
-_In 3 simple steps, get all your personal finances in order!_
+***In 3 simple steps, get all your personal finances in order!***
 
 Datini is a web application designed to help you manage your personal finances with ease. With Datini, you can keep track of your monthly income, expenses, and overall financial health. Here's how you can get started with Datini:
 
-Inspired by the book _The Merchant of Prato_ by Iris Origo about the life and business of Francesco Datini, a 14th-century merchant and financier, _Datini_ embodies the spirit of meticulous financial management and forward-thinking business practices. Francesco Datini, known for his detailed record-keeping and innovative approach to commerce, serves as the inspiration for this app. In homage to Datini's legacy, this web application aims to provide users with a tool to easily manage their personal finances with the same precision and clarity that Datini practiced in his time.
+Inspired by the book _The Merchant of Prato_, by Iris Origo, about the life and business of Francesco Datini, a 14th-century merchant and financier, this app embodies the spirit of meticulous financial management and forward-thinking business practices. Francesco Datini, known for his detailed record-keeping and innovative approach to commerce, serves as the inspiration for this app. This web application aims to provide users with a tool to easily manage their personal finances with the same precision and clarity that Datini practiced in his time.
 
 ## Features
 
