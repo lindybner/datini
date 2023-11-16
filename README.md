@@ -1,4 +1,4 @@
-# Datini - Personal Finance Management Web App
+# Datini
 
 **_In 3 simple steps, get all your personal finances in order!_**
 
