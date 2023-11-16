@@ -1,22 +1,8 @@
 @extends('layouts.layout')
 
-@section('title', 'Balances')
+@section('title', 'Step 2: Balances (Asset & Liability)')
 
 @section('content')
-
-        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
-            <h1>
-                Step 2: Balances (Asset &amp; Liability)
-            </h1>
-            <?php if(Auth::check()): ?>
-                Logged in as
-                <strong><?= auth()->user()->username ?></strong>!
-
-            <?php else: ?>
-                <a href="/">Return to Homepage</a>
-            <?php endif; ?>
-        </div>
-    </header>
 
     <?php if(session()->has('message')): ?>
         <div class="text-danger m-5 p-3 text-center border border-danger rounded-3">

@@ -62,6 +62,20 @@
             </div>
         </nav>
 
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
+            <h1>
+                @yield('title', 'Datini')
+            </h1>
+            <?php if(Auth::check()): ?>
+                Logged in as
+                <strong><?= auth()->user()->username ?></strong>!
+
+            <?php else: ?>
+                <a href="/login">Login</a> or <a href="/register">signup</a> to do more!
+            <?php endif; ?>
+        </div>
+    </header>
+
     <!-- Content Section -->
     <div class="content">
         @yield('content')

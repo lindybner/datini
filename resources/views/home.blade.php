@@ -4,20 +4,6 @@
 
 @section('content')
 
-        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
-            <h1>
-                Welcome!
-            </h1>
-            <?php if(Auth::check()): ?>
-                Logged in as
-                <strong><?= auth()->user()->username ?></strong>!
-
-            <?php else: ?>
-                <a href="/login">Login</a> or <a href="/register">signup</a> to do more!
-            <?php endif; ?>
-        </div>
-    </header>
-
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">

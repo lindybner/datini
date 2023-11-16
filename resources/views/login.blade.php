@@ -3,12 +3,6 @@
 @section('title', 'Login')
 
 @section('content')
-        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
-            <h1>
-                Login
-            </h1>
-        </div>
-    </header>
 
     <section class="p-3 m-5 border border-primary-subtle rounded-3">
         

@@ -4,20 +4,6 @@
 
 @section('content')
 
-        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-5">
-            <h1>
-                Add a new balance
-            </h1>
-            <?php if(Auth::check()): ?>
-                Logged in as
-                <strong><?= auth()->user()->username ?></strong>!
-
-            <?php else: ?>
-                <a href="/">Return to Homepage</a>
-            <?php endif; ?>
-        </div>
-    </header>
-
     <div class="container">
         <form action="/balances/add" method="POST" novalidate>
             <?= csrf_field() ?>
