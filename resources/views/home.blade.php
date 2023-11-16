@@ -4,6 +4,15 @@
 
 @section('content')
 
+    <div class="p-3 text-info-emphasis bg-info-subtle border border-info-subtle rounded-3 m-5">
+        <h2>
+            The Merchant of Prato: Financial Wisdom
+        </h2>
+        <p>
+            This educational web app is inspired by the life of 14<sup>th</sup>-century businessman Francesco Datini and the book about him &mdash; <em>The Merchant of Prato</em> by Iris Origo. This learning tool introduces basic bookkeeping concepts essential for managing financial health. Learn how you can start mastering your personal finances today in 3 simple steps!
+        </p>
+    </div>
+
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
